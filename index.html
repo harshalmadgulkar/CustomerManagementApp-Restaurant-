@@ -13,6 +13,7 @@
 
 <body>
   <div id="root"></div>
+  <!-- <a href="https://github.com/harshalmadgulkar/Customer_Management_App_Restaurant_or_Hotel"> GitHub Repository </a> -->
 
   <script type="text/babel">
     let customers = [];
@@ -177,9 +178,7 @@
               <td> {customer.room} </td>
               <td> {customer.checkIn} </td>
 
-              <td>
-                {customer.checkOut ? new Date().toLocaleTimeString() : "-"}
-              </td>
+              <td>{customer.checkOut ? new Date().toLocaleTimeString() : "-"}</td>
 
               <td className={customer.checkOut ? "served" : "dining"}>
                 <a onClick={() => handleCheckOut(id)}>{customer.status} </a>
@@ -212,6 +211,8 @@
 
     const rootElement = ReactDOM.createRoot(document.getElementById("root"));
     rootElement.render(<App />);
+
   </script>
 </body>
+
 </html>
